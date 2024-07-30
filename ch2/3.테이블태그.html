@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.테이블태그</title>
+    <!--
+        날짜 : 2024/07/22
+        이름 : 박수정
+        내용 : HTML 테이블 생성하기
+    -->
+</head>
+<body>
+    <h3>User 목록</h3>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>나이</th>
+        </tr>
+         <tr>
+            <th>a101</th>
+            <th>김유신</th>
+            <th>010-1234-1111</th>
+            <th>23</th>
+         </tr>
+         <tr>
+            <th>a102</th>
+            <th>김춘추</th>
+            <th>010-1234-2222</th>
+            <th>25</th>
+         </tr>
+         <tr>
+            <th>a103</th>
+            <th>강감찬</th>
+            <th>010-1234-3333</th>
+            <th>30</th>
+         </tr>
+         <tr>
+            <th>a104</th>
+            <th>장보고</th>
+            <th>010-1234-4444</th>
+            <th>32</th>
+         </tr>
+         <tr>
+            <th>a105</th>
+            <th>이순신</th>
+            <th>010-1234-5555</th>
+            <th>25</th>
+         </tr>
+    </table>
+
+    <h3>테이블 셀병합</h3>
+    <table border="1">
+    <tr>
+        <td colspan="2">1x1</td>
+        <td rowspan="2">1x3</td>
+        <td rowspan="3">1x4</td>
+        <td rowspan="4">1x5</td>
+    </tr>
+    <tr>
+        <td>2x1</td>
+        <td>2x2</td>
+    </tr>
+    <tr>
+        <td colspan="3">3x1</td>
+    </tr>
+    <tr>
+        <td colspan="4">4x1</td>
+    </tr>
+</table>
+</body>
+</html>
