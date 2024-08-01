@@ -1,0 +1,434 @@
+.frame-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.frame-frame {
+  width: 100%;
+  height: 1106px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.frame-header {
+  top: 0px;
+  left: 470px;
+  width: 980px;
+  height: 142px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_k_z2-ppvba-5fec-200h.png");
+}
+.frame-text {
+  top: 17px;
+  left: 787.4500122070312px;
+  color: rgba(17, 17, 17, 1);
+  width: 193px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.frame-text01 {
+  color: rgba(17, 17, 17, 1);
+}
+.frame-text02 {
+  color: rgba(0, 0, 0, 1);
+}
+.frame-text03 {
+  color: rgba(17, 17, 17, 1);
+}
+.frame-text04 {
+  color: rgba(0, 0, 0, 1);
+}
+.frame-text05 {
+  color: rgba(17, 17, 17, 1);
+}
+.frame-text06 {
+  color: rgba(0, 0, 0, 1);
+}
+.frame-headtxtimgpng {
+  top: 59px;
+  left: 751px;
+  width: 229px;
+  height: 15px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_2x-sn5mk7y-mbif-200h.png");
+}
+.frame-linklogopng {
+  top: 20px;
+  left: 395px;
+  width: 190px;
+  height: 64px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_8oygszhors-wlme-200h.png");
+}
+.frame-list {
+  top: 92px;
+  left: 0px;
+  width: 980px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.frame-item {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_6licrtrncx-7nwf-200h.png");
+}
+.frame-link {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  position: absolute;
+}
+.frame-item1 {
+  top: 0px;
+  left: 196px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_hfxtdvd6nx-rvr-200h.png");
+}
+.frame-link1 {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_8lpdffjgzw-s4wy3-200h.png");
+}
+.frame-headmenubadgepng {
+  top: -16px;
+  left: 98px;
+  width: 37px;
+  height: 34px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_y-u7qkfmmi-tse-200h.png");
+}
+.frame-item2 {
+  top: 0px;
+  left: 392px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_aenynkyj92-8uoa-200h.png");
+}
+.frame-link2 {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  position: absolute;
+}
+.frame-item3 {
+  top: 0px;
+  left: 588px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_0b9rlqxdco-n8z2-200h.png");
+}
+.frame-link3 {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  position: absolute;
+}
+.frame-item4 {
+  top: 0px;
+  left: 784px;
+  width: 196px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_4eaqbzt98y-889-200h.png");
+}
+.frame-link4 {
+  top: 0px;
+  left: 0px;
+  width: 196px;
+  height: 50px;
+  position: absolute;
+}
+.frame-background {
+  top: 142px;
+  left: 470px;
+  width: 980px;
+  height: 184px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_ebmeqif26s-5rla-200h.png");
+}
+.frame-subtoptit4png {
+  top: 137px;
+  left: 10px;
+  width: 143px;
+  height: 37px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_whejwpfbvd-hcog-200h.png");
+}
+.frame-section {
+  top: 326px;
+  left: 470px;
+  width: 980px;
+  height: 650px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.frame-aside {
+  top: 0px;
+  left: 0px;
+  width: 176px;
+  height: 650px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_xdluwbwfhs-2plw7-200w.png");
+}
+.frame-subasidecate4titpng {
+  top: 16px;
+  left: 16px;
+  width: 129px;
+  height: 44px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_jjebczolfv-x8r-200h.png");
+}
+.frame-list1 {
+  top: 80px;
+  left: 0px;
+  width: 175px;
+  height: 233px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_u7hdslsais-itij-300h.png");
+}
+.frame-item-link {
+  top: 26px;
+  left: 0px;
+  width: 175px;
+  height: 29px;
+  position: absolute;
+}
+.frame-article {
+  top: 0px;
+  left: 176px;
+  width: 802px;
+  height: 650px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.frame-nav {
+  top: 0px;
+  left: 40px;
+  width: 762px;
+  height: 72px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(194, 194, 194, 1);
+  border-style: solid;
+  border-width: 0 0 1px;
+}
+.frame-subnavtitcate4tit1png {
+  top: 43px;
+  left: 0px;
+  width: 66px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_d4yn_t10xh-9mxq-200h.png");
+}
+.frame-background1 {
+  top: 50px;
+  left: 609.1300048828125px;
+  width: 153px;
+  height: 17px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq_zg1da7kxmc-shqu-200h.png");
+}
+.frame-text08 {
+  top: 1px;
+  left: 20px;
+  color: rgba(140, 140, 140, 1);
+  width: 133px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.frame-text09 {
+  color: rgba(140, 140, 140, 1);
+  font-weight: 400;
+}
+.frame-text11 {
+  top: 113px;
+  left: 40px;
+  color: rgba(0, 0, 0, 1);
+  width: 220px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.frame-footer {
+  top: 976px;
+  left: 470px;
+  width: 980px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(209, 202, 178, 1);
+  border-style: solid;
+  border-width: 1px 0 0;
+}
+.frame-footerlogopng {
+  top: 1px;
+  left: 0px;
+  width: 174px;
+  height: 64px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("public/external/tq__gnn_elyo--040d-200h.png");
+}
+.frame-text13 {
+  top: 27px;
+  left: 243.52000427246094px;
+  color: rgba(88, 88, 88, 1);
+  width: 721px;
+  height: auto;
+  position: absolute;
+  font-size: 10.828125px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.frame-text19 {
+  top: 83px;
+  left: 243.52000427246094px;
+  color: rgba(136, 136, 136, 1);
+  width: 207px;
+  height: auto;
+  position: absolute;
+  font-size: 10.875px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
