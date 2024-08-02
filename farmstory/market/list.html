@@ -1,1808 +1,294 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>푸드샵::layout</title>
+    
     <style>
-        /* 장보기 > 상품목록 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '돋움';
+        }
 
-        position: relative;
-        width: 1920px;
-        height: 1214px;
-        overflow-y: scroll;
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
 
-        background: #FFFFFF;
-
-
-        /* Header */
+        #wrapper {
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
 
         header {
-            position: absolute;
-            height: 142px;
-            left: 470px;
-            right: 470px;
-            top: 0px;
-            background: url(.png);
-        }
-
-        header .top>p {
-            font-size: 12px;
-            line-height: 14.52px;
-            float: right;
-            margin-top: 10px;
-
-        }
-
-        /* Link → HOME | */
-
-        position: absolute;
-        width: 192.75px;
-        height: 14px;
-        left: 787.45px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* head_txt_img.png */
-
-        header>div>article>a {
-            position: absolute;
-            width: 229px;
-            height: 15px;
-            left: 751px;
-            top: 59px;
-
-            background: url(.png);
-        }
-
-
-
-        /* Link → logo.png */
-        header article>.logo {
-            position: absolute;
-            width: 190px;
-            height: 64px;
-            left: 395px;
-            top: 20px;
-
-            background: url(.png);
-        }
-
-
-
-        /* List */
-
-        position: absolute;
-        height: 50px;
-        left: 0%;
-        right: 0%;
-        bottom: 0px;
-
-
-
-        /* Item */
-
-        position: absolute;
-        left: 0%;
-        right: 80%;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Item */
-
-        position: absolute;
-        left: 20%;
-        right: 60%;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* head_menu_badge.png */
-
-        position: absolute;
-        height: 34px;
-        left: 50%;
-        right: 31.12%;
-        top: -16px;
-
-        background: url(.png);
-
-
-        /* Item */
-
-        position: absolute;
-        left: 40%;
-        right: 40%;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Item */
-
-        position: absolute;
-        left: 60%;
-        right: 20%;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Item */
-
-        position: absolute;
-        left: 80%;
-        right: 0%;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-
-        background: url(.png);
-
-
-        /* Background */
-
-        position: absolute;
-        height: 184px;
-        left: 470px;
-        right: 470px;
-        top: 142px;
-
-        background: url(.jpg);
-
-
-        /* sub_top_tit2.png */
-
-        position: absolute;
-        width: 186px;
-        height: 37px;
-        left: 10px;
-        bottom: 10px;
-
-        background: url(.png);
-
-
-        /* Section */
-
-        position: absolute;
-        height: 758px;
-        left: 470px;
-        right: 470px;
-        top: 326px;
-
-
-
-        /* Aside */
-
-        position: absolute;
-        width: 176px;
-        height: 650px;
-        left: 0px;
-        top: 0px;
-
-        background: url(.png);
-
-
-        /* sub_aside_cate2_tit.png */
-
-        position: absolute;
-        width: 103px;
-        height: 45px;
-        left: 16px;
-        top: 16px;
-
-        background: url(.png);
-
-
-        /* List */
-
-        position: absolute;
-        width: 175px;
-        height: 233px;
-        left: 0px;
-        top: 81px;
-
-        background: url(.png);
-
-
-        /* Item → Link */
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 26px;
-        bottom: 178px;
-
-        background: url(.png);
-
-
-        /* Article */
-
-        position: absolute;
-        width: 802px;
-        height: 758px;
-        left: 176px;
-        top: 0px;
-
-
-
-        /* Link → 전체(10) | */
-
-        position: absolute;
-        width: 141.42px;
-        height: 14px;
-        left: 40px;
-        top: 113px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.8125px;
-        line-height: 14px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Table */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        height: 564px;
-        left: 40px;
-        right: 0px;
-        top: 139px;
-
-        border-width: 1px 0px;
-        border-style: solid;
-        border-color: #111111;
-
-
-        /* Header → Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 38px;
-        left: 0px;
-        top: calc(50% - 38px/2 - 262.5px);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 100px;
-        height: 38px;
-        left: 0px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 이미지 */
-
-        position: absolute;
-        width: 36.2px;
-        height: 14px;
-        left: 32px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 76.19px;
-        height: 38px;
-        left: 100px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 종류 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 26.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 311.5px;
-        height: 38px;
-        left: 176.19px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 상품명 */
-
-        position: absolute;
-        width: 36.2px;
-        height: 14px;
-        left: 137.75px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 91.44px;
-        height: 38px;
-        left: 487.69px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 할인 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 33.72px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 91.44px;
-        height: 38px;
-        left: 579.13px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 포인트 */
-
-        position: absolute;
-        width: 36.2px;
-        height: 14px;
-        left: 27.71px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Cell */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 91.44px;
-        height: 38px;
-        left: 670.56px;
-        top: calc(50% - 38px/2);
-
-        background: #E5ECEF;
-        border-bottom: 1px solid #D1DEE2;
-
-
-        /* 판매가격 */
-
-        position: absolute;
-        width: 48.2px;
-        height: 14px;
-        left: 21.72px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-
-
-
-        /* Body */
-
-        position: absolute;
-        width: 762px;
-        height: 525px;
-        left: 0px;
-        top: calc(50% - 525px/2 + 19px);
-
-
-
-        /* Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 105px;
-        left: 0px;
-        top: calc(50% - 105px/2 - 210px);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Data → Link → market_item1.jpg */
-
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 10px;
-        top: 10.5px;
-
-        background: url(.jpg);
-
-
-        /* Data → 과일 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 126.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #777777;
-
-
-
-        /* Data → Link → 사과 500g */
-
-        position: absolute;
-        width: 51.2px;
-        height: 14px;
-        left: 186.19px;
-        top: 45px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.0625px;
-        line-height: 13px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Data → 10% */
-
-        position: absolute;
-        width: 22.2px;
-        height: 14px;
-        left: 522.41px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.625px;
-        line-height: 14px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data → 400P */
-
-        position: absolute;
-        width: 24.89px;
-        height: 14px;
-        left: 612.5px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data */
-
-        position: absolute;
-        height: 105px;
-        left: 88%;
-        right: 0%;
-        top: calc(50% - 105px/2);
-
-
-
-        /* Strong */
-
-        position: absolute;
-        width: 39px;
-        height: 14px;
-        left: 11.22px;
-        top: 36.5px;
-
-
-
-        /* 3,600원 */
-
-        position: absolute;
-        width: 39.2px;
-        height: 14px;
-        left: 0px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10.125px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Del */
-
-        position: absolute;
-        width: 40.5px;
-        height: 31px;
-        left: 39.72px;
-        top: 36.5px;
-
-
-
-        /* 4,000 */
-
-        position: absolute;
-        width: 27.2px;
-        height: 14px;
-        left: 13.5px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* 원 */
-
-        position: absolute;
-        width: 12.2px;
-        height: 14px;
-        left: 0px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 105px;
-        left: 0px;
-        top: calc(50% - 105px/2 - 105px);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Data → Link → market_item2.jpg */
-
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 10px;
-        top: 10.5px;
-
-        background: url(.jpg);
-
-
-        /* Data → 과일 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 126.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #777777;
-
-
-
-        /* Data → Link → 전남 완주 배 5kg */
-
-        position: absolute;
-        width: 87.2px;
-        height: 14px;
-        left: 186.19px;
-        top: 45px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Data → 10% */
-
-        position: absolute;
-        width: 22.2px;
-        height: 14px;
-        left: 522.41px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.625px;
-        line-height: 14px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data → 400P */
-
-        position: absolute;
-        width: 24.89px;
-        height: 14px;
-        left: 612.5px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data */
-
-        position: absolute;
-        height: 105px;
-        left: 88%;
-        right: 0%;
-        top: calc(50% - 105px/2);
-
-
-
-        /* Strong */
-
-        position: absolute;
-        width: 39px;
-        height: 14px;
-        left: 11.22px;
-        top: 36.5px;
-
-
-
-        /* 3,600원 */
-
-        position: absolute;
-        width: 39.2px;
-        height: 14px;
-        left: 0px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10.125px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Del */
-
-        position: absolute;
-        width: 40.5px;
-        height: 31px;
-        left: 39.72px;
-        top: 36.5px;
-
-
-
-        /* 4,000 */
-
-        position: absolute;
-        width: 27.2px;
-        height: 14px;
-        left: 13.5px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* 원 */
-
-        position: absolute;
-        width: 12.2px;
-        height: 14px;
-        left: 0px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 105px;
-        left: 0px;
-        top: calc(50% - 105px/2);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Data → Link → market_item3.jpg */
-
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 10px;
-        top: 10.5px;
-
-        background: url(.jpg);
-
-
-        /* Data → 과일 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 126.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #777777;
-
-
-
-        /* Data → Link → 방울 토마토 */
-
-        position: absolute;
-        width: 63.2px;
-        height: 14px;
-        left: 186.19px;
-        top: 45px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Data → 10% */
-
-        position: absolute;
-        width: 22.2px;
-        height: 14px;
-        left: 522.41px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.625px;
-        line-height: 14px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data → 400P */
-
-        position: absolute;
-        width: 24.89px;
-        height: 14px;
-        left: 612.5px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data */
-
-        position: absolute;
-        height: 105px;
-        left: 88%;
-        right: 0%;
-        top: calc(50% - 105px/2);
-
-
-
-        /* Strong */
-
-        position: absolute;
-        width: 39px;
-        height: 14px;
-        left: 11.22px;
-        top: 36.5px;
-
-
-
-        /* 3,600원 */
-
-        position: absolute;
-        width: 39.2px;
-        height: 14px;
-        left: 0px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10.125px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Del */
-
-        position: absolute;
-        width: 40.5px;
-        height: 31px;
-        left: 39.72px;
-        top: 36.5px;
-
-
-
-        /* 4,000 */
-
-        position: absolute;
-        width: 27.2px;
-        height: 14px;
-        left: 13.5px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* 원 */
-
-        position: absolute;
-        width: 12.2px;
-        height: 14px;
-        left: 0px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 105px;
-        left: 0px;
-        top: calc(50% - 105px/2 + 105px);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Data → Link → market_item6.jpg */
-
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 10px;
-        top: 10.5px;
-
-        background: url(.jpg);
-
-
-        /* Data → 곡류 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 126.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #777777;
-
-
-
-        /* Data → Link → 무농약 현미 */
-
-        position: absolute;
-        width: 63.2px;
-        height: 14px;
-        left: 186.19px;
-        top: 45px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Data → 10% */
-
-        position: absolute;
-        width: 22.2px;
-        height: 14px;
-        left: 522.41px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.625px;
-        line-height: 14px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data → 400P */
-
-        position: absolute;
-        width: 24.89px;
-        height: 14px;
-        left: 612.5px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data */
-
-        position: absolute;
-        height: 105px;
-        left: 88%;
-        right: 0%;
-        top: calc(50% - 105px/2);
-
-
-
-        /* Strong */
-
-        position: absolute;
-        width: 39px;
-        height: 14px;
-        left: 11.22px;
-        top: 36.5px;
-
-
-
-        /* 3,600원 */
-
-        position: absolute;
-        width: 39.2px;
-        height: 14px;
-        left: 0px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10.125px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Del */
-
-        position: absolute;
-        width: 40.5px;
-        height: 31px;
-        left: 39.72px;
-        top: 36.5px;
-
-
-
-        /* 4,000 */
-
-        position: absolute;
-        width: 27.2px;
-        height: 14px;
-        left: 13.5px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* 원 */
-
-        position: absolute;
-        width: 12.2px;
-        height: 14px;
-        left: 0px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* Row */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        width: 762px;
-        height: 105px;
-        left: 0px;
-        top: calc(50% - 105px/2 + 210px);
-
-        border-bottom: 1px solid #EEEEEE;
-
-
-        /* Data → Link → market_item7.jpg */
-
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        left: 10px;
-        top: 10.5px;
-
-        background: url(.jpg);
-
-
-        /* Data → 야채 */
-
-        position: absolute;
-        width: 24.2px;
-        height: 14px;
-        left: 126.09px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #777777;
-
-
-
-        /* Data → Link → 팜스토리 하루야채 샐러드 */
-
-        position: absolute;
-        width: 138.2px;
-        height: 14px;
-        left: 186.19px;
-        top: 45px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #111111;
-
-
-
-        /* Data → 10% */
-
-        position: absolute;
-        width: 22.2px;
-        height: 14px;
-        left: 522.41px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11.625px;
-        line-height: 14px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data → 400P */
-
-        position: absolute;
-        width: 24.89px;
-        height: 14px;
-        left: 612.5px;
-        top: calc(50% - 14px/2 - 0.5px);
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Data */
-
-        position: absolute;
-        height: 105px;
-        left: 88%;
-        right: 0%;
-        top: calc(50% - 105px/2);
-
-
-
-        /* Strong */
-
-        position: absolute;
-        width: 39px;
-        height: 14px;
-        left: 11.22px;
-        top: 36.5px;
-
-
-
-        /* 3,600원 */
-
-        position: absolute;
-        width: 39.2px;
-        height: 14px;
-        left: 0px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10.125px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #111111;
-
-
-
-        /* Del */
-
-        position: absolute;
-        width: 40.5px;
-        height: 31px;
-        left: 39.72px;
-        top: 36.5px;
-
-
-
-        /* 4,000 */
-
-        position: absolute;
-        width: 27.2px;
-        height: 14px;
-        left: 13.5px;
-        top: 0px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9.75px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* 원 */
-
-        position: absolute;
-        width: 12.2px;
-        height: 14px;
-        left: 0px;
-        top: 17px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: line-through;
-
-        color: #777777;
-
-
-
-        /* Link → < */
-
-        position: absolute;
-        width: 101.76px;
-        height: 14px;
-        left: calc(50% - 101.76px/2 + 20.1px);
-        top: 723px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10.5px;
-        line-height: 13px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #999999;
-
-
-
-        /* Nav */
-
-        box-sizing: border-box;
-
-        position: absolute;
-        height: 72px;
-        left: 40px;
-        right: 0px;
-        top: 0px;
-
-        border-bottom: 1px solid #C2C2C2;
-
-
-        /* sub_nav_tit_cate2_tit1.png */
-
-        position: absolute;
-        width: 69px;
-        height: 24px;
-        left: 0px;
-        bottom: 5px;
-
-        background: url(.png);
-
-
-        /* Background */
-
-        position: absolute;
-        height: 17px;
-        left: 79.94%;
-        right: 0%;
-        bottom: 5px;
-
-        background: url(.gif);
-
-
-        /* HOME > 장보기 > 장보기 */
-
-        position: absolute;
-        width: 133.07px;
-        height: 14px;
-        left: 20px;
-        top: 1px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        align-items: center;
-
-        color: #8C8C8C;
-
-
-
-        /* Footer */
-        footer {
+            width: 100%;
+            height: auto;
+            border: 1px solid blue;
             box-sizing: border-box;
-            position: absolute;
-            height: 130px;
-            left: 470px;
-            right: 470px;
-            top: 1084px;
-            border-top: 1px solid #D1CAB2;
         }
 
-        /* footer_logo.png */
-        footer>div>div>img {
-            position: absolute;
-            width: 174px;
-            height: 64px;
-            left: 0px;
-            top: 1px;
+        header > div {
+            width: 100%;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
 
-            background: url(.png);
+        header > div:nth-child(1) {height: 36px;}
+        header > div:nth-child(2) {height: 100px;}
+        header > div:nth-child(3) {height: 54px;}
+
+        header > div > * {
+            width: 1100px;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        main {
+            width: 100%;
+            height: auto;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        main > section {
+            width: 100%;
+            height: auto;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+
+        main > section:nth-child(1) {height: 352px;}
+        main > section:nth-child(2) {height: 520px;}
+        main > section:nth-child(3) {height: 190px;}
+        main > section:nth-child(4) {height: 660px;}
+        main > section:nth-child(5) {height: 200px;}
+        main > section:nth-child(6) {height: 660px;}
+
+        main > section > article {
+            width: 1100px;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        main > .slider {}
+        
+        main > .go {}
+
+        main > .go > article {
+            padding: 30px 10px;
+            box-sizing: border-box;
+        }
+        main > .go div {
+            float: left;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        main > .go div:nth-child(1) {width: 412px; height: 450px;}
+        main > .go div:nth-child(2) {width: 322px; height: 220px; margin-left: 11px;}
+        main > .go div:nth-child(3) {float:right; width: 322px; height: 220px;}
+        main > .go div:nth-child(4) {width: 322px; height: 220px; margin-left: 11px; margin-top: 10px;}
+        main > .go div:nth-child(5) {float:right; width: 322px; height: 220px; margin-top: 10px;}
+
+
+        main > .oneday {}
+
+        main > .vegetable {}
+        main > .vegetable > article {}
+        main > .vegetable ul {            
+            width: 100%;
+            height: 312px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main > .vegetable ul > li {
+            float: left;
+            width: 25%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+        }        
+
+        main > .premium {}
+        main > .seafood {}
+        main > .seafood > article {}
+        main > .seafood ul {            
+            width: 100%;
+            height: 312px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main > .seafood ul > li {
+            float:left;
+            width: 25%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+        }        
+
+        footer {
+            width: 100%;
+            height: auto;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        footer > div {
+            width: 100%;
+            border: 1px solid green;
+            box-sizing: border-box;            
+        }
+
+        footer > div:nth-child(1) {
+            height: 50px;
+        }
+
+        footer > div:nth-child(2) {
+            height: 156px;            
+        }
+
+        footer > div > div {
+            width: 1100px;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+            margin: 0 auto;
         }
 
 
-
-        /* (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-팜스토리구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호 등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동 대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 경기도 성남시 잘한다구 신난다동 345 */
-
-        footer>div>div>p {
-            position: absolute;
-            width: 720.68px;
-            height: 54px;
-            left: 243.52px;
-            top: 27px;
-
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 10.8281px;
-            line-height: 18px;
-            /* or 166% */
-            display: flex;
-            align-items: center;
-
-            color: #585858;
-        }
-
-
-
-
-        /* Emphasis → Copyright(C)홍길동 All rights reserved. */
-        footer>div>div>span {
-            position: absolute;
-            width: 206.62px;
-            height: 14px;
-            left: 243.52px;
-            top: 83px;
-
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 10.875px;
-            line-height: 13px;
-
-            /* identical to box height */
-            display: flex;
-            align-items: center;
-
-            color: #888888;
-        }
     </style>
+    
 </head>
-
 <body>
-    <header>
-        <div>
-            <div class="top">
-                <p>
-                    <a href="#">HOME | </a>
-                    <a href="#">로그인 | </a>
-                    <a href="#">회원가입 | </a>
-                    <a href="#">고객센터</a>
-                </p>
-            </div>
-        </div>
-        <div>
-            <article>
-                <a href="#" class="logo">
-                    <img src="./images/logo.png" alt="헤드로고">
-                </a>
-                <a href="#" class="oneday_txt">
-                    <img src="./images/head_txt_img.png" alt="3만원이상 무료배송">
-                </a>
-            </article>
-        </div>
-        <div>
-            <nav>
-                <ul>
-                    <img src="./images/head_menu_line.png" alt="헤드라인1">
-                    <img src="./images/head_menu_line.png" alt="헤드라인2">
-                    <img src="./images/head_menu_line.png" alt="헤드라인3">
-                    <img src="./images/head_menu_line.png" alt="헤드라인4">
-                    <img src="./images/head_menu_line.png" alt="헤드라인5">
-
-                    <li>
-                        <a href="#" class="menu1">
-                            <img src="./images/head_menu1.png" alt="팜스토리소개">
-                        </a>
-
-                        <a href="#" class="menu2">
-                            <img src="./images/head_menu2.png" alt="장보기">
-                        </a>
-                        <a href="#" class="menu3">
-                            <img src="./images/head_menu3.png" alt="농작물이야기">
-                        </a>
-
-                        <a href="#" class="menu4">
-                            <img src="./images/head_menu4.png" alt="이벤트">
-                        </a>
-
-                        <a href="#" class="menu5">
-                            <img src="./images/head_menu5.png" alt="커뮤니티">
-                        </a>
-
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main></main>
-    <footer>
-        <div>
+    <div id="wrapper">
+        <header>
             <div>
-                <img src="./images/footer_top_line.png" alt="푸터라인">
-                <img src="./images/footer_logo.png" alt="로고">
-                <p class="info">
-                    (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-팜스토리구-123호 / 벤처기업확인 서울지방중소기업청 제
-                    012345678-9-01234호<br>
-                    등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동<br>
-                    대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 경기도 성남시 잘한다구 신난다동 345<br>
-                </p>
-                <span>Copyright(C)홍길동 All rights reserved.</span>
+                <img src="./images/head_top_line.png" alt="탑라인">
+                <div class="top">
+                    <p>
+                        <a href="#">HOME | </a>
+                        <a href="#">로그인 | </a>
+                        <a href="#">회원가입 | </a>
+                        <a href="#">고객센터</a>
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
-    </div>
+            <div>
+                <article>
+                    <a href="#" class="logo">
+                        <img src="./images/logo.png" alt="헤더로고">
+                    </a>
+                    <a href="#" class="oneday_txt">
+                        <img src="./images/head_txt_img.png" alt="3만원이상무료배송">
+                    </a>
+                </article>
+            </div>
+            <div>
+                <nav>
+                    <img src="./images/head_menu_line.png" alt="헤더라인1">
+                    <img src="./images/head_menu_line.png" alt="헤더라인2">
+                    <img src="./images/head_menu_line.png" alt="헤더라인3">
+                    <img src="./images/head_menu_line.png" alt="헤더라인4">
+                    <img src="./images/head_menu_line.png" alt="헤더라인5">
+                    <ul>
+                        <li>
+                            <a href="#">팜스토리소개</a>
+                        </li>
+                        <li>
+                            <img src="./images/head_menu_badge.png" alt="30%배지">
+                            <a href="#">장보기</a>
+                        </li>
+                        <li>
+                            <a href="#">농작물이야기</a>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <article class="notice">
+                    <img src="./images/sub_aside_cate2_tit.png" alt="Buying in the Market">
+                    <img src="./images/sub_aside_bg_lnb.png" alt="사이드배너">
+                    <img src="./images/sub_cate2_lnb1_ov.png" alt="장보기배너">
+                    <img src="./images/sub_aside_bg_line.png" alt="사이드라인">
+                </article>
+            </aside>
+            <section class="slider">
+                <article>
+                    <ul>
+                        <li>
+                            <img src="./images/sub_top_bg.jpg" alt="메인이미지">
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="go">
+                <article>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </article>
+            </section>
+            <section class="oneday">
+                <article></article>
+            </section>
+            <section class="vegetable">
+                <article>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="premium">
+                <article></article>
+            </section>
+            <section class="seafood">
+                <article>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div>
+                    <img src="./images/footer_top_line.png" alt="푸터라인">
+                    <img src="./images/footer_logo.png" alt="푸터로고">
+                    <p class="info">
+                        (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-팜스토리구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호<br/>
+                        등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동<br/>
+                        대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 경기도 성남시 잘한다구 신난다동 345
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>    
 </body>
-
 </html>
