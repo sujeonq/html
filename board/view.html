@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Board :: View</title>
 		<style>
 			/* reset */
 
@@ -22,7 +22,19 @@
 				border: none;
 				resize: none;
 				width: 100%;
-				height: 200px;
+				height: 300px;
+				font-size: 16px;
+			}
+
+			.info_btn {
+				border: none;
+				background-color: white;
+			}
+			.comm_txt {
+				border: none;
+				resize: none;
+				width: 100%;
+				height: 80px;
 				font-size: 16px;
 			}
 			.container {
@@ -78,6 +90,21 @@
 				padding: 8px 10px;
 			}
 
+			.comm_btn {
+				background-color: black;
+				border: 1px solid #ccc;
+				padding: 8px 10px;
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 15px;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				color: #ffffff;
+			}
+
 			.list {
 				display: flex;
 				border-bottom: 1px solid #ddd;
@@ -85,7 +112,7 @@
 
 			.board_sub_title {
 				width: 150px;
-				background-color: #f5f8f9;
+				background-color: #F5F8F9;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -109,10 +136,16 @@
 				display: flex;
 			}
 
+			.comm_name {
+				margin-right: 5px;
+			}
+
 			.item {
 				background-color: #f2f2f2;
 				border: 1px solid #ccc;
 				padding: 15px;
+				margin-top: 10px;
+				margin-bottom: 10px;
 			}
 
 			.item_title {
@@ -123,7 +156,25 @@
 			}
 
 			.comm_content {
-				padding: 10px;
+				padding: 3px;
+			}
+
+			.none {
+				padding: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				line-height: 15px;
+				color: #000000;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit; /* 부모 요소의 색상 상속 */
+			}
+
+			.link_wrap {
+				margin: 5px;
 			}
 		</style>
 	</head>
@@ -136,7 +187,10 @@
 					<div class="info">
 						<div class="user_name">홍길동</div>
 						님 반갑습니다.
-						<button type="button">[로그아웃]</button>
+						<a href="#">[로그아웃]</a>
+						<!-- <button class="info_btn" type="button">
+							[로그아웃]
+						</button> -->
 					</div>
 				</div>
 				<div class="main">
@@ -153,7 +207,8 @@
 								<div class="board_sub_title">파일</div>
 								<div class="board_content">
 									2020년 상반기 매출자료.xls
-									<button type="button">다운로드</button>
+									<a href="#">다운로드</a>
+									<!-- <button type="button">다운로드</button> -->
 								</div>
 							</div>
 							<div class="list">
@@ -178,9 +233,15 @@
 										<div class="comm_name">길동이</div>
 										<div class="comm_date">20-05-20</div>
 									</div>
-									<div class="wrap">
-										<button class="button">삭제</button>
-										<button class="button">수정</button>
+									<div class="link_wrap">
+										<!-- <button class="link_button">
+											삭제
+										</button>
+										<button class="link_button">
+											수정
+										</button> -->
+										<a href="#">삭제</a>
+										<a href="#">수정</a>
 									</div>
 								</div>
 								<div class="comm_content">댓글 샘플입니다.</div>
@@ -188,7 +249,16 @@
 							<div class="none">등록된 댓글이 없습니다.</div>
 						</div>
 					</div>
-					<div class="item"></div>
+					<div class="item">
+						<div class="item_title">댓글쓰기</div>
+						<div class="item_content">
+							<textarea class="comm_txt"></textarea>
+						</div>
+						<div class="button_wrap">
+							<button class="board_btn">취소</button>
+							<button class="comm_btn">작성완료</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
