@@ -1,140 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			/* reset */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board View</title>
-    <style>
-        * {
-            float: inherit;
-            top: -318px;
-            left: -2668px;
-            padding: 0px 560px 18px 560px;
-            gap: 0px;
-            opacity: 0px;
-        }
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-        header {
-            position: absolute;
-            height: 35px;
-            left: 560px;
-            right: 560px;
-            top: 0px;
-        }
+			input {
+				border: none;
+				font-size: 16px;
+			}
 
-        header>h3 {
-            position: absolute;
-            width: 67.87px;
-            height: 14px;
-            left: 0px;
-            top: 10px;
+			textarea {
+				border: none;
+				resize: none;
+				width: 100%;
+				height: 200px;
+				font-size: 16px;
+			}
+			.container {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+			}
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 10.125px;
-            line-height: 12px;
-            display: flex;
-            align-items: center;
+			.box {
+				width: 800px;
+			}
 
-            color: #000000;
+			.info {
+				display: flex;
+			}
+			.header {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 50px;
+			}
 
-        }
+			footer {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin: 32px 0 12px;
+			}
 
-        main {
-            width: 800px;
-            height: 896px;
-            top: 95px;
-            left: 560px;
-            gap: 0px;
-            opacity: 0px;
-            border: 1px solid black;
-            box-sizing: border-box;
+			.footer_wrap {
+				width: 800px;
+				display: flex;
+				justify-content: space-between;
+			}
 
-        }
+			/* 글보기 */
+			.button_wrap {
+				width: 100%;
+				display: flex;
+				justify-content: right;
+				gap: 5px;
+				margin-top: 8px;
+			}
 
+			.board_title {
+				border-bottom: 1px solid #333;
+				padding: 12px 0;
+			}
 
-        header>span {
-            position: absolute;
-            width: 173.2px;
-            height: 14px;
-            left: 627px;
-            top: 11px;
+			.board_btn {
+				background-color: white;
+				border: 1px solid #ccc;
+				padding: 8px 10px;
+			}
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-            display: flex;
-            align-items: center;
+			.list {
+				display: flex;
+				border-bottom: 1px solid #ddd;
+			}
 
-            color: #000000;
-        }
+			.board_sub_title {
+				width: 150px;
+				background-color: #f5f8f9;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* justify-content = 가로정렬 */
+				/* align-items = 세로정렬 */
+			}
 
+			.board_content {
+				width: calc(100% - 150px);
+				padding: 16px;
+			}
 
-        footer {
-            position: absolute;
-            height: 17px;
-            left: 560px;
-            right: 570px;
-            top: 1051px;
-        }
+			/* 댓글 목록 */
 
-        footer > class > copy {
-            position: absolute;
-            width: 182.87px;
-            height: 14px;
-            left: 0px;
-            top: 1px;
+			.comm_top {
+				display: flex;
+				justify-content: space-between;
+			}
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-            display: flex;
-            align-items: center;
+			.wrap {
+				display: flex;
+			}
 
-            color: #777777;
-        }
+			.item {
+				background-color: #f2f2f2;
+				border: 1px solid #ccc;
+				padding: 15px;
+			}
 
-        footer version {
-            position: absolute;
-            width: 30.2px;
-            height: 14px;
-            left: 760px;
-            top: 0px;
+			.item_title {
+				border-bottom: 1px dashed #333;
+				padding: 5px 0;
+				margin-bottom: 12px;
+				font-weight: bold;
+			}
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-            display: flex;
-            align-items: center;
+			.comm_content {
+				padding: 10px;
+			}
+		</style>
+	</head>
 
-            color: #777777;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h3>Board System</h3>
-        <span>홍길동님 반갑습니다.
-            <a class="#">로그아웃</a>
-        </span>
-    </header>
-    <main></main>
-    <footer>
-        <span class="copy">Copyrightⓒ 김철학(개발에반하다.) </span>
-        <span class="version">v1.0.1</span>
-    </footer>
-</body>
-
+	<body>
+		<div class="container">
+			<div class="box">
+				<div class="header">
+					<span>Board System</span>
+					<div class="info">
+						<div class="user_name">홍길동</div>
+						님 반갑습니다.
+						<button type="button">[로그아웃]</button>
+					</div>
+				</div>
+				<div class="main">
+					<div class="board">
+						<div class="board_title">글보기</div>
+						<div class="board_box">
+							<div class="list">
+								<div class="board_sub_title">제목</div>
+								<div class="board_content">
+									<input value="제목입니다." />
+								</div>
+							</div>
+							<div class="list">
+								<div class="board_sub_title">파일</div>
+								<div class="board_content">
+									2020년 상반기 매출자료.xls
+									<button type="button">다운로드</button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="board_sub_title">내용</div>
+								<div class="board_content">
+									<textarea></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="button_wrap">
+							<button class="board_btn">삭제</button>
+							<button class="board_btn">수정</button>
+							<button class="board_btn">목록</button>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_title">댓글목록</div>
+						<div class="comm_wrap">
+							<div class="comm">
+								<div class="comm_top">
+									<div class="wrap">
+										<div class="comm_name">길동이</div>
+										<div class="comm_date">20-05-20</div>
+									</div>
+									<div class="wrap">
+										<button class="button">삭제</button>
+										<button class="button">수정</button>
+									</div>
+								</div>
+								<div class="comm_content">댓글 샘플입니다.</div>
+							</div>
+							<div class="none">등록된 댓글이 없습니다.</div>
+						</div>
+					</div>
+					<div class="item"></div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer_wrap">
+				<span>Copyright© 김철학(개발에 반하다.)</span>
+				<p class="version">v.1.0.1</p>
+			</div>
+		</footer>
+	</body>
 </html>
-
-
-
