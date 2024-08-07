@@ -3,30 +3,27 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Board :: View</title>
+		<title>글보기</title>
 		<style>
 			/* reset */
-
 			* {
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
 			}
 
-			input {
+			input, textarea {
 				border: none;
 				font-size: 16px;
 			}
 
 			textarea {
-				border: none;
 				resize: none;
 				width: 100%;
-				height: 300px;
-				font-size: 16px;
+				height: 180px;
 			}
 
-			.info_btn {
+			.info_btn, .board_btn, .comm_btn {
 				border: none;
 				background-color: white;
 			}
@@ -37,13 +34,16 @@
 				height: 80px;
 				font-size: 16px;
 			}
+
+			/* 레이아웃: 중앙 정렬을 위한 Flexbox 사용 */
 			.container {
 				width: 100%;
 				height: 100%;
 				display: flex;
 				justify-content: center;
 			}
-
+			
+			/* 레이아웃: 중앙 정렬을 위한 Flexbox 사용 */
 			.box {
 				width: 800px;
 			}
@@ -85,7 +85,6 @@
 			}
 
 			.board_btn {
-				background-color: white;
 				border: 1px solid #ccc;
 				padding: 8px 10px;
 			}
