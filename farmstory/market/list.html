@@ -76,6 +76,7 @@
             margin: 20px 0;
             text-align: center;
             justify-content: space-between;
+
         }
 
 
@@ -94,19 +95,21 @@
         }
 
         .row_tit {
-            background-color: orange;
             left: calc(100%-200px);
             height: 72px;
             padding: 43px 0px 5px 0px;
         }
 
 
+
         /* 사이드 */
+
+
         .body {
             display: flex;
         }
 
-        .sidebar {
+        .aside_bar {
             width: 200px;
             margin-right: 20px;
         }
@@ -123,6 +126,45 @@
         }
 
         /* 도표 */
+        .main_a {
+            display: flex;
+            justify-content: left;
+        }
+
+        .article {
+            width: 802px;
+            height: 100%;
+            left: 176px;
+            gap: 0px;
+            opacity: 0px;
+            padding: 30px;
+        }
+
+        .aside {
+            width: 176px;
+            height: 650px;
+        }
+
+        .aside_tit {
+            width: 103px;
+            height: 45px;
+            top: 16px;
+            left: 16px;
+            margin: 20px;
+        }
+
+        .aside_list {
+            width: 175px;
+            height: 233px;
+            top: 81px;
+            padding: 26px 0px 178px 0px;
+            background-image: url(./images/sub_aside_bg_lnb.png);
+        }
+
+        .aside_line {
+            float: right;
+        }
+
         .database {
             width: 762px;
         }
@@ -130,20 +172,25 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            /* 테두리 겹침을 없애기 위해 사용 */
             margin-top: 20px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
         }
 
         th,
         td {
             padding: 10px;
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
+
+        td,
+        th {
+            border-left: none;
+            /* 세로 테두리 제거 */
+            border-right: none;
+            /* 세로 테두리 제거 */
+        }
+
 
         a {
             text-decoration: none;
@@ -160,10 +207,14 @@
             background-color: #D1DEE2;
         }
 
-        .row_tit > img{
+        .row_tit>img {
             width: 69px;
             height: 24px;
 
+        }
+
+        .row_tit {
+            border-bottom: 1px solid #ddd;
         }
 
         .sub_comm {
@@ -231,7 +282,7 @@
             <header>
                 <!--<h1>farmStory</h1>-->
 
-                <div>
+                <div class="header">
                     <div class="header_top">
                         <div class="header_img">
                             <img src="./images/head_top_line.png" alt="헤더라인">
@@ -273,139 +324,144 @@
             <div class="content_img">
                 <img src="./images/sub_top_tit2.png" alt="Market">
             </div>
-
-            <div class="row_tit">
-                <img src="./images/sub_nav_tit_cate2_tit1.png" alt="장보기타이틀">
-                <nav class="sub_comm">
-                    <a href="#">HOME </a>
-                    <a href="#"> > </a>
-                    <a href="#"> 장보기 </a>
-                    <a href="#"> > </a>
-                    <a href="#"> 장보기 </a>
-                </nav>
-            </div>
-
-            <div class="inner_container">
-                <div class="content">
-                    <div class="body">
-                        <div class="aside">
-                            <aside class="sidebar">
-                                <div class="side_tit">
-                                    <img src="./images/sub_aside_cate2_tit.png" alt="사이드타이틀">
-                                </div>
-                                <div class="side_cate">
-                                    <img src="./images/sub_cate2_lnb1_ov.png" alt="사이드장보기">
-                                </div>
-                            </aside>
+            <div class="main_a">
+                <div class="aside">
+                    <aside class="aside_bar">
+                        <div class="aside_tit">
+                            <img src="./images/sub_aside_cate2_tit.png" alt="사이드타이틀">
                         </div>
+                        <div class="aside_list">
+                            <img src="./images/sub_cate2_lnb1_ov.png" alt="사이드장보기">
+                        </div>
+                    </aside>
+                    <aside class="aside_line">
+                        <img src="./images/sub_aside_bg_line.png" alt="사이드라인">
+                    </aside>
+                </div>
 
-                        <div class=main_content>
+                <div class="article">
+                    <div class="row_tit">
+                        <img src="./images/sub_nav_tit_cate2_tit1.png" alt="장보기타이틀"><br>
+                        <nav class="sub_comm">
+                            <a href="#">HOME </a>
+                            <a href="#"> > </a>
+                            <a href="#"> 장보기 </a>
+                            <a href="#"> > </a>
+                            <a href="#"> 장보기 </a>
+                        </nav>
 
+                    </div>
+                    <div class="inner_container">
+                        <div class="content">
+                            <div class="body">
+                                <div class=main_content>
+                                    <div class="row_comm">
+                                        <a href="#">
+                                            <strong>전체(10) |</strong>
+                                        </a>
+                                        <a href="#">과일 |</a>
+                                        <a href="#">야채 |</a>
+                                        <a href="#">곡류</a>
+                                    </div>
+                                    <table class="database">
+                                        <thead>
+                                            <tr class="row_menu">
+                                                <th>이미지</th>
+                                                <th>종류</th>
+                                                <th>상품명</th>
+                                                <th>할인</th>
+                                                <th>포인트</th>
+                                                <th>판매가격</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="./images/market_item1.jpg" alt="사과 500g" width="50"></td>
+                                                <td>과일</td>
+                                                <td>사과 500g</td>
+                                                <td>10%</td>
+                                                <td>400P</td>
+                                                <td>
+                                                    <strong class="new_price">3,600원</strong>
+                                                    <a class="price">
+                                                        <del>4,000</del><br>
+                                                        <del class="won">원</del>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/market_item2.jpg" alt="전남 완주 배 5kg" width="50">
+                                                </td>
+                                                <td>과일</td>
+                                                <td>전남 양파 5kg</td>
+                                                <td>10%</td>
+                                                <td>400P</td>
+                                                <td>
+                                                    <strong class="new_price">3,600원</strong>
+                                                    <a class="price">
+                                                        <del>4,000</del><br>
+                                                        <del class="won">원</del>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/market_item3.jpg" alt="방울 토마토" width="50"></td>
+                                                <td>과일</td>
+                                                <td>방울 토마토</td>
+                                                <td>10%</td>
+                                                <td>400P</td>
+                                                <td>
+                                                    <strong class="new_price">3,600원</strong>
+                                                    <a class="price">
+                                                        <del>4,000</del><br>
+                                                        <del class="won">원</del>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/market_item6.jpg" alt="무농약 현미" width="50"></td>
+                                                <td>곡류</td>
+                                                <td>무농약 팽이</td>
+                                                <td>10%</td>
+                                                <td>400P</td>
+                                                <td>
+                                                    <strong class="new_price">3,600원</strong>
+                                                    <a class="price">
+                                                        <del>4,000</del><br>
+                                                        <del class="won">원</del>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/market_item7.jpg" alt="팜스토리 하루야채 샐러드" width="50">
+                                                </td>
+                                                <td>야채</td>
+                                                <td>팜스토리 하와이안 샐러드</td>
+                                                <td>10%</td>
+                                                <td>400P</td>
+                                                <td>
+                                                    <strong class="new_price">3,600원</strong>
+                                                    <a class="price">
+                                                        <del>4,000</del><br>
+                                                        <del class="won">원</del>
+                                                    </a>
+                                                </td>
+                                            </tr>
 
+                                        </tbody>
 
-
-                            <div class="row_comm">
-                                <a href="#">
-                                    <strong>전체(10) |</strong>
-                                </a>
-                                <a href="#">과일 |</a>
-                                <a href="#">야채 |</a>
-                                <a href="#">곡류</a>
+                                    </table>
+                                    <span class="under_no">
+                                        < [1] [2] [3] [4] [5]>
+                                    </span>
+                                </div>
                             </div>
-                            <table class="database">
-                                <thead>
-                                    <img src="./images/main_cs_top_line.png" alt="메인라인">
-                                    <tr class="row_menu">
-                                        <th>이미지</th>
-                                        <th>종류</th>
-                                        <th>상품명</th>
-                                        <th>할인</th>
-                                        <th>포인트</th>
-                                        <th>판매가격</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="./images/market_item1.jpg" alt="사과 500g" width="50"></td>
-                                        <td>과일</td>
-                                        <td>사과 500g</td>
-                                        <td>10%</td>
-                                        <td>400P</td>
-                                        <td>
-                                            <strong class="new_price">3,600원</strong>
-                                            <a class="price">
-                                                <del>4,000</del><br>
-                                                <del class="won">원</del>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="images/market_item2.jpg" alt="전남 완주 배 5kg" width="50"></td>
-                                        <td>과일</td>
-                                        <td>전남 양파 5kg</td>
-                                        <td>10%</td>
-                                        <td>400P</td>
-                                        <td>
-                                            <strong class="new_price">3,600원</strong>
-                                            <a class="price">
-                                                <del>4,000</del><br>
-                                                <del class="won">원</del>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="images/market_item3.jpg" alt="방울 토마토" width="50"></td>
-                                        <td>과일</td>
-                                        <td>방울 토마토</td>
-                                        <td>10%</td>
-                                        <td>400P</td>
-                                        <td>
-                                            <strong class="new_price">3,600원</strong>
-                                            <a class="price">
-                                                <del>4,000</del><br>
-                                                <del class="won">원</del>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="images/market_item6.jpg" alt="무농약 현미" width="50"></td>
-                                        <td>곡류</td>
-                                        <td>무농약 팽이</td>
-                                        <td>10%</td>
-                                        <td>400P</td>
-                                        <td>
-                                            <strong class="new_price">3,600원</strong>
-                                            <a class="price">
-                                                <del>4,000</del><br>
-                                                <del class="won">원</del>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="images/market_item7.jpg" alt="팜스토리 하루야채 샐러드" width="50"></td>
-                                        <td>야채</td>
-                                        <td>팜스토리 하와이안 샐러드</td>
-                                        <td>10%</td>
-                                        <td>400P</td>
-                                        <td>
-                                            <strong class="new_price">3,600원</strong>
-                                            <a class="price">
-                                                <del>4,000</del><br>
-                                                <del class="won">원</del>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-                            <span class="under_no">
-                                < [1] [2] [3] [4] [5]>
-                            </span>
                         </div>
                     </div>
+
                 </div>
             </div>
+
 
 
             <div class="footer_line">
