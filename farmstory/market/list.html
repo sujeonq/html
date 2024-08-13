@@ -50,7 +50,16 @@
         .header_logo {
             display: flex;
             justify-content: center;
+            background-color: orange;
         }
+
+        
+        .header_txt_img {
+            height: 15px;
+            display: flex;
+            justify-content: right;
+        }
+
 
         .header_comm {
             width: 229px;
@@ -66,11 +75,6 @@
             font-size: 12px;
         }
 
-        .header_bottom {
-            display: flex;
-            justify-content: right;
-            margin-bottom: 10px;
-        }
 
         nav {
             margin: 20px 0;
@@ -84,6 +88,12 @@
             display: flex;
             justify-content: center;
             padding: 10px;
+            a:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+        .under_no > a > strong > num1 {
+            text-decoration: 1px solid black underline;
         }
 
 
@@ -163,6 +173,8 @@
 
         .aside_line {
             float: right;
+            margin-top: -270px;
+            
         }
 
         .database {
@@ -279,27 +291,28 @@
 <body>
     <div class="container">
         <div class="box">
+            <div class="header_top">
+                <div class="header_img">
+                    <img src="./images/head_top_line.png" alt="헤더라인">
+                </div>
+                <div class="header_home">
+                    <a href="#">HOME |</a>
+                    <a href="#">로그인 |</a>
+                    <a href="#">회원가입 |</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
             <header>
                 <!--<h1>farmStory</h1>-->
 
                 <div class="header">
-                    <div class="header_top">
-                        <div class="header_img">
-                            <img src="./images/head_top_line.png" alt="헤더라인">
-                        </div>
-                        <div class="header_home">
-                            <a href="#">HOME |</a>
-                            <a href="#">로그인 |</a>
-                            <a href="#">회원가입 |</a>
-                            <a href="#">고객센터</a>
-                        </div>
-                    </div>
                     <div class="header_logo">
                         <img src="./images/logo.png" alt="farmStory">
+                        <div class="header_txt_img">
+                            <img src="./images/head_txt_img.png" alt="3만원이상 무료배송">
+                        </div>
                     </div>
-                    <div class="header_bottom">
-                        <img src="./images/head_txt_img.png" alt="3만원이상 무료배송">
-                    </div>
+
                 </div>
 
                 <div class="item">
@@ -452,7 +465,15 @@
 
                                     </table>
                                     <span class="under_no">
-                                        < [1] [2] [3] [4] [5]>
+                                        <a><</a>      
+                                        <a href="#">
+                                            <strong class="num1">[1]</strong>
+                                        </a>                                        
+                                        <a href="#">[2]</a>                                        
+                                        <a href="#">[3]</a>                                        
+                                        <a href="#">[4]</a>                                        
+                                        <a href="#">[5]</a>                                        
+                                        <a>></a>                                        
                                     </span>
                                 </div>
                             </div>
